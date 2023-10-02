@@ -1,0 +1,9 @@
+<form (submit) = "onFormSubmit($event)">
+    <input value="" (input) = "onInput($event)" class="input" type="text" placeholder="Text input">
+    <button type="submit" class="button is-info is-light">Search</button>
+</form>
+<table>
+    <tr *ngFor = "let item of dictionary">
+        <th>{{item?.definition}}</th>
+    </tr><br/><br/>
+</table>

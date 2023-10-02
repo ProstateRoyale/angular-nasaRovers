@@ -1,0 +1,37 @@
+<form (submit) = "onFormSubmit($event)">
+    <input value="" (input) = "onInput($event)" class="input" type="text" placeholder="Text input">
+    <button type="submit" class="button is-info is-light">Search</button>
+</form>
+<table>
+    <thead>
+      <tr>
+        <th>One</th>
+        <th>Two</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Country Capital: </td>
+        <td>{{country?.capital}}</td>
+      </tr>
+      <tr>
+        <td>Country Common Name: </td>
+        <td>{{country?.name.common}}</td>
+      </tr>
+      <tr>
+        <td>Country Official Name: </td>
+        <td> {{country?.name.official}}</td>
+      </tr>
+      <tr>
+        <td>Country Region: </td>
+        <td>{{country?.region}}</td>
+      </tr>
+      <tr>
+        <td>Country Population: </td>
+        <td>{{country?.population | shortNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+<main>
+    <div>{{error?.message}}</div>
+</main><br/><br/>

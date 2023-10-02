@@ -1,0 +1,27 @@
+<div class="media">
+    <div class="media-left">
+        <figure class="image is-248x248">
+            <img [src]=data.img alt="Placeholder image">
+        </figure>
+    </div>
+    <div class="content">
+        <div class="content">Rover Name: {{data.name}}</div>
+        <div class="content">Launching date: {{data.launch_date}}</div>
+        <div class="content">Landing Date: {{data.landing_date}}</div>
+        <div class="content">Rover Status: {{data.status}}</div>
+        <div class="content">Rover's all Photos: {{data.total_photos}}</div>
+    </div>
+</div>
+
+<form (submit) = "onFormSubmit($event)">
+    <input value="" (input) = "onInput($event)" type="date">
+    <button type="submit">Search</button>
+</form>
+
+<div *ngFor = "let item of dateSpiritUrl">
+    <img [src]=item?.img_src alt="">
+</div><br/>
+
+<div *ngIf = "dateSpiritUrl?.length === 0">
+    Sorry in that day was not any photo
+</div>
